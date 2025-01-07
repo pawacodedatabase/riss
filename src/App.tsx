@@ -12,6 +12,8 @@ import OrderHistory from './Pages/products/orderhistory';
 import ContactUs from './Pages/contact';
 import Footer from './Pages/footer';
 import ScrollToTop from './Pages/components/scroll';
+import Collections from './Pages/products/collections';
+import FAQAccordion from './Pages/faq';
 
 
 // Importing pages
@@ -34,6 +36,8 @@ const App: React.FC = () => {
         <Route path="/cart" element={<Cart/>} />
         <Route path="/contact" element={<ContactUs/>} />
         <Route path="/checkout" element={<Checkout/>} />
+        <Route path="/faq" element={<FAQAccordion/>} />
+        <Route path="/collection" element={<Collections/>} />
         <Route path="/product/:id" element={<ProductDetail />} />
          </Routes>
          <Footer/>

@@ -31,7 +31,7 @@ const CollectionComponent = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
         >
-          <Link to="/new">
+          <Link to="/collection">
             <p className="text-white underline text-sm md:text-lg text-center mb-6">
               EXPLORE OUR NEW COLLECTION
             </p>

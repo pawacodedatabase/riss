@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
-import {  FaInstagram,  FaEnvelope, FaWhatsapp, FaPhone } from 'react-icons/fa';
+import React, { useState } from "react";
+import { FaInstagram, FaEnvelope, FaWhatsapp, FaPhone } from "react-icons/fa";
 
 const Footer: React.FC = () => {
-  const [email, setEmail] = useState('');
+  const [email, setEmail] = useState("");
   const [success, setSuccess] = useState(false);
 
   const handleSubscribe = (e: React.FormEvent) => {
     e.preventDefault();
-    if (email.trim() === '') return;
+    if (email.trim() === "") return;
     setSuccess(true);
-    setEmail('');
+    setEmail("");
   };
 
   return (
@@ -19,18 +19,24 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-8">
           {/* About Us */}
           <div>
-            <h3 className="text-xl font-bold mb-4 border-l-4 border-red-600 pl-2">About Us</h3>
+            <h3 className="text-xl font-bold mb-4 border-l-4 border-red-600 pl-2">
+              About Us
+            </h3>
             <p className="text-gray-300 text-sm leading-relaxed">
-            At Riss, we deliver elegance and quality.
-            Discover exquisite clothing, accessories, and personalized styling services designed to enhance your style and confidence.
+              At Riss, we deliver elegance and quality. Discover exquisite
+              clothing, accessories, and personalized styling services designed
+              to enhance your style and confidence.
             </p>
           </div>
 
           {/* Newsletter */}
           <div>
-            <h3 className="text-xl font-bold mb-4 border-l-4 border-red-600 pl-2">Newsletter</h3>
+            <h3 className="text-xl font-bold mb-4 border-l-4 border-red-600 pl-2">
+              Newsletter
+            </h3>
             <p className="text-gray-300 text-sm mb-4">
-              Subscribe to our newsletter and stay updated on new arrivals, sales, and exclusive offers.
+              Subscribe to our newsletter and stay updated on new arrivals,
+              sales, and exclusive offers.
             </p>
             <form onSubmit={handleSubscribe} className="relative">
               <input
@@ -49,26 +55,32 @@ const Footer: React.FC = () => {
               </button>
             </form>
             {success && (
-              <p className="text-green-200 mt-2 text-sm">Thanks for subscribing!</p>
+              <p className="text-green-200 mt-2 text-sm">
+                Thanks for subscribing!
+              </p>
             )}
           </div>
 
           {/* Follow Us */}
           <div>
-            <h3 className="text-xl font-bold mb-4 border-l-4 border-red-600 pl-2">Follow Us</h3>
-            <p className="text-gray-300 text-sm mb-4">Connect with us on social media:</p>
+            <h3 className="text-xl font-bold mb-4 border-l-4 border-red-600 pl-2">
+              Follow Us
+            </h3>
+            <p className="text-gray-300 text-sm mb-4">
+              Connect with us on social media:
+            </p>
             <div className="flex justify-center space-x-4">
-            <a
-  href="mailto:jaelsann@gmail.com"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="bg-gray-700 hover:bg-red-600 p-3 rounded-full text-white text-lg transition"
->
-  <FaEnvelope />
-</a>
-              
               <a
-                href="https://instagram.com/shopwithjaels"
+                href="mailto:riss"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-gray-700 hover:bg-red-600 p-3 rounded-full text-white text-lg transition"
+              >
+                <FaEnvelope />
+              </a>
+
+              <a
+                href="https://instagram.com/shopwith"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-gray-700 hover:bg-red-600 p-3 rounded-full text-white text-lg transition"
@@ -86,13 +98,11 @@ const Footer: React.FC = () => {
               </a>
 
               <a
-  href="tel:+2349132214390"
-  className="bg-gray-700 hover:bg-red-600 p-3 rounded-full text-white text-lg transition"
->
-  <FaPhone />
-</a>
-
-             
+                href="tel:+2349132214390"
+                className="bg-gray-700 hover:bg-red-600 p-3 rounded-full text-white text-lg transition"
+              >
+                <FaPhone />
+              </a>
             </div>
           </div>
         </div>
@@ -102,20 +112,31 @@ const Footer: React.FC = () => {
 
         {/* Bottom Section */}
         <div className="flex flex-col md:flex-row justify-between items-center mt-6">
-          <p className="text-gray-400 text-sm">&copy; {new Date().getFullYear()} Riss. All rights reserved.</p>
+          <p className="text-gray-400 text-sm">
+            &copy; {new Date().getFullYear()} Riss. All rights reserved.
+          </p>
           <ul className="flex space-x-6 mt-4 md:mt-0">
             <li>
-              <a href="/privacy-policy" className="text-gray-300 hover:text-red-500 text-sm transition">
+              <a
+                href="/privacy-policy"
+                className="text-gray-300 hover:text-red-500 text-sm transition"
+              >
                 Privacy Policy
               </a>
             </li>
             <li>
-              <a href="/terms" className="text-gray-300 hover:text-red-500 text-sm transition">
+              <a
+                href="/terms"
+                className="text-gray-300 hover:text-red-500 text-sm transition"
+              >
                 Terms of Service
               </a>
             </li>
             <li>
-              <a href="/contact" className="text-gray-300 hover:text-red-500 text-sm transition">
+              <a
+                href="/contact"
+                className="text-gray-300 hover:text-red-500 text-sm transition"
+              >
                 Contact Us
               </a>
             </li>
@@ -123,17 +144,19 @@ const Footer: React.FC = () => {
         </div>
 
         {/* //advert */}
-<div className='text-sm text-center mt-8 '>
-  <p className='text-gray-400'>website created by | <a
-                href="https://instagram.com/pawacode"
-                target="_blank"
-                rel="noopener noreferrer"
-                className='text-red-500'
-              >
-                @pawacode
-              </a></p>
-</div>
-        
+        <div className="text-sm text-center mt-8 ">
+          <p className="text-gray-400">
+            website created by |{" "}
+            <a
+              href="https://instagram.com/pawacode"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-red-500"
+            >
+              @pawacode
+            </a>
+          </p>
+        </div>
       </div>
     </footer>
   );
