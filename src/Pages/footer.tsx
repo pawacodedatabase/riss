@@ -148,7 +148,7 @@ const Footer: React.FC = () => {
           <p className="text-gray-400">
             website created by |{" "}
             <a
-              href="https://instagram.com/pawacode"
+              href="https://wa.me/2348053208997"
               target="_blank"
               rel="noopener noreferrer"
               className="text-red-500"

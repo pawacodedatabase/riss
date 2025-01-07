@@ -14,6 +14,7 @@ import Footer from './Pages/footer';
 import ScrollToTop from './Pages/components/scroll';
 import Collections from './Pages/products/collections';
 import FAQAccordion from './Pages/faq';
+import WhatsAppIcon from './Pages/components/whatsapp';
 
 
 // Importing pages
@@ -26,6 +27,7 @@ const App: React.FC = () => {
       
  <ScrollToTop/>
           <Header/>
+          
         <Routes>
          
         <Route path="/" element={<Home />} />
@@ -41,6 +43,7 @@ const App: React.FC = () => {
         <Route path="/product/:id" element={<ProductDetail />} />
          </Routes>
          <Footer/>
+         <WhatsAppIcon/>
       </div>
     </Router>
   );

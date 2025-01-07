@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { products, Product } from './product'; // Ensure this is the correct path
+import FashionComponent from '../components/fasionComp';
+import {  FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 
 const Collections: React.FC = () => {
   const itemsPerPage = 8; // Number of products per page
@@ -24,7 +26,8 @@ const Collections: React.FC = () => {
   };
 
   return (
-    <div className="mt-8">
+   <>
+   <div className="mt-8">
       <h2 className="text-2xl font-bold text-center mb-6 font-riss">Collections</h2>
       <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-4 p-5">
         {paginatedProducts.map((product: Product) => (
@@ -61,29 +64,31 @@ const Collections: React.FC = () => {
       <div className="flex justify-center items-center mt-6 space-x-4">
         <button
           onClick={() => handlePageChange(currentPage - 1)}
-          className={`px-4 py-2 bg-gray-200 text-gray-700 rounded-lg ${
-            currentPage === 1 ? 'cursor-not-allowed opacity-50' : 'hover:bg-gray-300'
+          className={`px-4 py-2 bg-black text-[#fff] rounded-lg ${
+            currentPage === 1 ? 'opacity-90' : 'hover:bg-gray-300'
           }`}
           disabled={currentPage === 1}
         >
-          Previous
+          <FaArrowLeft/>
         </button>
 
         <div className="text-gray-700">
-          Page {currentPage} of {totalPages}
+           {currentPage} of {totalPages}
         </div>
 
         <button
           onClick={() => handlePageChange(currentPage + 1)}
-          className={`px-4 py-2 bg-gray-200 text-gray-700 rounded-lg ${
-            currentPage === totalPages ? 'cursor-not-allowed opacity-50' : 'hover:bg-gray-300'
+          className={`px-4 py-2 bg-black text-[#fff] rounded-lg ${
+            currentPage === totalPages ? 'opacity-90' : 'hover:bg-gray-300'
           }`}
           disabled={currentPage === totalPages}
         >
-          Next
+          <FaArrowRight/>
         </button>
       </div>
     </div>
+    <FashionComponent/>
+    </> 
   );
 };
 

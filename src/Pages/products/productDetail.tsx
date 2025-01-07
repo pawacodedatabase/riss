@@ -123,7 +123,7 @@ const ProductDetail: React.FC = () => {
       {isModalOpen && (
         <div className="fixed inset-0 flex justify-center items-center bg-gray-500 bg-opacity-70 z-50">
           <div className="bg-white p-8 rounded-lg mt-9 shadow-lg max-w-lg w-[80%] h-[500px] text-center">
-            <h2 className="text-2xl font-semibold text-gray-800 mb-4">Oops! Product Not Found</h2>
+            <h2 className="text-2xl font-semibold text-gray-800 mb-4 font-riss">Oops! Product Not Found</h2>
             <p className="text-lg text-gray-600 mb-6">The product you are looking for doesn't exist or may have been removed.</p>
             <button
               className="mt-9 bg-black text-white py-2 px-4 rounded-lg hover:bg-gray-500 transition duration-300"
@@ -163,11 +163,11 @@ const ProductDetail: React.FC = () => {
           </div>
 
           <div className="mt-6">
-            <h1 className="text-3xl font-bold text-gray-800">{product.name}</h1>
-            <p className="text-lg text-gray-600 mt-2">{product.description}</p>
+            <h1 className="text-3xl font-bold text-gray-800 text-center font-riss">{product.name}</h1>
+            <p className="text-sm text-gray-600 mt-2 p-2">{product.description}</p>
 
             <div className="flex items-center mt-4">
-              <p className="text-xl font-bold text-gray-800">₦{product.price.toFixed(2)}</p>
+              <p className="text-2xl font-bold text-gray-800">₦{product.price.toFixed(2)}</p>
               {product.isOnSale && product.originalPrice && (
                 <p className="text-sm text-red-500 line-through ml-4">
                   ₦{product.originalPrice.toFixed(2)}
@@ -250,7 +250,7 @@ const ProductDetail: React.FC = () => {
               
       <div>
         <div className="mt-8 border-t pt-6">
-          <h2 className="text-2xl font-thin text-gray-800 text-center">About the Brand</h2>
+          <h2 className="text-2xl  text-gray-800 text-center font-riss">About the Brand</h2>
           <p className="text-sm text-gray-800 mt-2 text-center">
             Riss specializes in high-quality Tshirts, shoes, accessories, and Native wears . Our mission is
             to bring elegance and style to your wardrobe at affordable prices.
@@ -259,10 +259,10 @@ const ProductDetail: React.FC = () => {
 
         {/* Social Media */}
         <div className="mt-6 flex justify-center space-x-4">
-          <a href="mailto:jriss@gmail.com" className="text-blue-600 hover:text-blue-800">
+          <a href="mailto:jriss@gmail.com" className="text-black hover:text-red-500">
             <FaEnvelope size={24} />
           </a>
-          <a href="https://instagram.com/rissluxury" className="text-pink-600 hover:text-pink-800">
+          <a href="https://instagram.com/rissluxury" className="text-black hover:text-red-500">
             <FaInstagram size={24} />
           </a>
         </div>
