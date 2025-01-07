@@ -4,6 +4,7 @@ import { products } from './product'; // Ensure to import your product data
 import { FaEnvelope, FaInstagram, FaRegStar, FaShoppingBag, FaStar } from 'react-icons/fa';
 import { FiShoppingCart } from 'react-icons/fi';
 import FeaturedProduct from './FeaturedProd';
+import ReviewComponent from '../components/review';
 
 interface CartItem {
   productId: number;
@@ -268,6 +269,7 @@ const ProductDetail: React.FC = () => {
       </div>
     </div>
     <FeaturedProduct/>
+    <ReviewComponent/>
     </>
   );
 };

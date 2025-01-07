@@ -30,7 +30,7 @@ const DualImageComponent = () => {
         >
           {/* Top-Left Text */}
           <h2 className="text-white text-lg md:text-xl font-thin">
-            The First Collection
+         New School
           </h2>
 
           {/* Bottom-Right Link */}
@@ -60,7 +60,7 @@ const DualImageComponent = () => {
         >
           {/* Top-Left Text */}
           <h2 className="text-white text-lg md:text-xl font-thin">
-            The Second Collection
+            Newest Collection
           </h2>
 
           {/* Bottom-Right Link */}
