@@ -8,7 +8,7 @@ import Cart from './Pages/products/cartt';
 import ProductDetail from './Pages/products/productDetail';
 import Checkout from './Pages/products/checkout';
 import OrderHistory from './Pages/products/orderhistory';
-import AboutBrand from './Pages/about';
+// import AboutBrand from './Pages/about';
 import ContactUs from './Pages/contact';
 import Footer from './Pages/footer';
 import ScrollToTop from './Pages/components/scroll';
